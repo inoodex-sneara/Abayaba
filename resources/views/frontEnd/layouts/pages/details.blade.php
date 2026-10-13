@@ -72,6 +72,41 @@
           <video src="{{ $details->pro_video }}" controls autoplay muted></video>
         </div>
         @endif
+        <!-- WhatsApp & Messenger buttons -->
+        <div class="mt-md-4 mt-4 mb-3">
+          <div class="row g-3">
+            <div class="col-6 col-md-4">
+              <a class="btn w-100 d-flex align-items-center justify-content-center gap-2" style="background:#25D366;color:#fff;border:none;padding:10px 20px;border-radius:8px;font-weight:600;font-size:15px;" target="_blank"
+                href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $contact->hotline) }}?text={{ urlencode('Hi, I am interested in ' . $details->name . ' - ' . route('product', $details->slug)) }}">
+                <i class="fa-brands fa-whatsapp" style="font-size:18px;"></i> WhatsApp
+              </a>
+            </div>
+            <div class="col-6 col-md-4">
+              <a class="btn w-100 d-flex align-items-center justify-content-center gap-2" style="background:#0084FF;color:#fff;border:none;padding:10px 20px;border-radius:8px;font-weight:600;font-size:15px;" target="_blank"
+                href="https://m.me/{{ $contact->facebook ?? '' }}?text={{ urlencode('Hi, I am interested in ' . $details->name . ' - ' . route('product', $details->slug)) }}">
+                <i class="fa-brands fa-facebook-messenger" style="font-size:18px;"></i> Messenger
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- faq accordion  -->
+        <div class="product_faq mt-4" style="max-width: 500px;">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  Feature And Details
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  {!! $details->specification !!}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-lg-4">
         <div class="product__info">
@@ -320,24 +355,6 @@
                 </div>
                 <div class="icon__content">
                   <span>Free Delivery</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- faq accordion  -->
-        <div class="product_faq">
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                  aria-expanded="true" aria-controls="collapseOne">
-                  Feature And Details
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  {!! $details->specification !!}
                 </div>
               </div>
             </div>

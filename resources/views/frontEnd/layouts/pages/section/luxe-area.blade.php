@@ -34,7 +34,7 @@
                 ৳ {{ $value->new_price }}
               </span>
               @if($value->old_price)
-              <span class="old-price"><i class="fa-solid fa-dollar-sign"></i>{{ $value->old_price }}
+              <span class="old-price">৳ {{ $value->old_price }}
               </span>
               @endif
             </div>
