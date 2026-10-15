@@ -77,13 +77,13 @@
           <div class="row g-3">
             <div class="col-6 col-md-4">
               <a class="btn w-100 d-flex align-items-center justify-content-center gap-2" style="background:#25D366;color:#fff;border:none;padding:10px 20px;border-radius:8px;font-weight:600;font-size:15px;" target="_blank"
-                href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $contact->hotline) }}?text={{ urlencode('Hi, I am interested in ' . $details->name . ' - ' . route('product', $details->slug)) }}">
+                href="https://wa.me/8801624339185?text={{ urlencode('Hi, I am interested in ' . $details->name . ' - ' . route('product', $details->slug)) }}">
                 <i class="fa-brands fa-whatsapp" style="font-size:18px;"></i> WhatsApp
               </a>
             </div>
             <div class="col-6 col-md-4">
               <a class="btn w-100 d-flex align-items-center justify-content-center gap-2" style="background:#0084FF;color:#fff;border:none;padding:10px 20px;border-radius:8px;font-weight:600;font-size:15px;" target="_blank"
-                href="https://m.me/{{ $contact->facebook ?? '' }}?text={{ urlencode('Hi, I am interested in ' . $details->name . ' - ' . route('product', $details->slug)) }}">
+                href="https://m.me/61579269110365?text={{ urlencode('Hi, I am interested in ' . $details->name . ' - ' . route('product', $details->slug)) }}">
                 <i class="fa-brands fa-facebook-messenger" style="font-size:18px;"></i> Messenger
               </a>
             </div>
